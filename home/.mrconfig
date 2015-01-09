@@ -20,5 +20,8 @@ checkout = git clone 'git@github.com:tomhoover/dotfiles-castle.git' 'dotfiles-ca
 fixups = 
 	chmod -R go= home/.config
 
-include = cat ~/.config/mr/`uname`.mrconfig
-include = cat ~/.config/mr/`hostname -s`.mrconfig
+#include = cat ~/.config/mr/`uname`.mrconfig
+include = [ -r ~/.config/mr/`uname`.mrconfig ] && cat ~/.config/mr/`uname`.mrconfig
+
+#include = cat ~/.config/mr/`hostname -s`.mrconfig
+include = [ -r ~/.config/mr/`hostname -s`.mrconfig ] && cat ~/.config/mr/`hostname -s`.mrconfig
