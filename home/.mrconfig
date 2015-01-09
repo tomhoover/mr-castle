@@ -1,3 +1,6 @@
+[DEFAULT]
+jobs = 5
+
 [.homesick/repos/bootstrap]
 checkout = git clone 'git@github.com:tomhoover/bootstrap.git' 'bootstrap'
 
