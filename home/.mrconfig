@@ -1,12 +1,15 @@
-[bin]
-checkout = git clone 'git@github.com:tomhoover/bin.git' 'bin'
+[.homesick/repos/bootstrap]
+checkout = git clone 'git@github.com:tomhoover/bootstrap.git' 'bootstrap'
+
+[.homesick/repos/mr-castle]
+checkout = git clone 'git@github.com:tomhoover/mr-castle.git' 'mr-castle'
 
 [.homesick/repos/homeshick]
 checkout = git clone 'git://github.com/andsens/homeshick.git' 'homeshick'
 push = echo "not pushing this one, read-only"
 
-[.homesick/repos/mr-castle]
-checkout = git clone 'git@github.com:tomhoover/mr-castle.git' 'mr-castle'
+[bin]
+checkout = git clone 'git@github.com:tomhoover/bin.git' 'bin'
 
 [.homesick/repos/dotfiles-castle]
 checkout = git clone 'git@github.com:tomhoover/dotfiles-castle.git' 'dotfiles-castle'
