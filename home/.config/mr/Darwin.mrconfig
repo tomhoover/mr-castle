@@ -1,0 +1,2 @@
+[src/altercation/solarized]
+checkout = git clone 'git://github.com/altercation/solarized.git' 'solarized'
