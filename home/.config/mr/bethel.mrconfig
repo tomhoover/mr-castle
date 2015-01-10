@@ -1,2 +1,7 @@
+[.sickrage]
+checkout = git clone 'https://github.com/SiCKRAGETV/SickRage.git' '.sickrage'
+push = echo "not pushing this one, read-only"
+
 [src/seebi/dircolors-solarized]
 checkout = git clone 'https://github.com/seebi/dircolors-solarized.git' 'dircolors-solarized'
+push = echo "not pushing this one, read-only"
