@@ -26,7 +26,7 @@ checkout = git clone 'git@github.com:tomhoover/mr-castle.git' 'mr-castle'
 [.homesick/repos/dotfiles-castle]
 checkout = git clone 'git@github.com:tomhoover/dotfiles-castle.git' 'dotfiles-castle'
 fixups = 
-	chmod -R go= home/.config
+	chmod -R go= ~/.config
 
 # system/host-specific repos
 
