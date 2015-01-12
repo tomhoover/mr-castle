@@ -6,6 +6,7 @@ jobs = 5
 
 [.oh-my-zsh]
 checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' '.oh-my-zsh'
+skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
 
 [bin]
@@ -18,6 +19,7 @@ checkout = git clone 'git@github.com:tomhoover/bootstrap.git' 'bootstrap'
 
 [.homesick/repos/homeshick]
 checkout = git clone 'git://github.com/andsens/homeshick.git' 'homeshick'
+skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
 
 [.homesick/repos/mr-castle]

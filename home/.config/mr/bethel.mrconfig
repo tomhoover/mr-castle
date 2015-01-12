@@ -1,7 +1,9 @@
 [.sickrage]
 checkout = git clone 'https://github.com/SiCKRAGETV/SickRage.git' '.sickrage'
+skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
 
 [src/gh_seebi/dircolors-solarized]
 checkout = git clone 'https://github.com/seebi/dircolors-solarized.git' 'dircolors-solarized'
+skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
