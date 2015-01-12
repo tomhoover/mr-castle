@@ -1,3 +1,15 @@
-[src/altercation/solarized]
+[src/gh_altercation/solarized]
 checkout = git clone 'git://github.com/altercation/solarized.git' 'solarized'
+push = echo "not pushing this one, read-only"
+
+[src/gh_barnybug/cli53]
+checkout = git clone 'https://github.com/barnybug/cli53.git' 'cli53'
+push = echo "not pushing this one, read-only"
+
+[src/gh_mathiasbynens/dotfiles]
+checkout = git clone 'git@github.com:mathiasbynens/dotfiles.git' 'dotfiles'
+push = echo "not pushing this one, read-only"
+
+[src/gh_nojhan/liquidprompt]
+checkout = git clone 'https://github.com/nojhan/liquidprompt.git' 'liquidprompt'
 push = echo "not pushing this one, read-only"
