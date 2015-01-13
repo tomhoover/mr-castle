@@ -5,33 +5,33 @@ jobs = 5
 # common repos
 
 [.oh-my-zsh]
-checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git'
+checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' '.oh-my-zsh'
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
 
 [bin]
-checkout = git clone 'git@github.com:tomhoover/bin.git'
+checkout = git clone 'git@github.com:tomhoover/bin.git' 'bin'
 
 [src/bootstrap]
-checkout = git clone 'git@github.com:tomhoover/bootstrap.git'
+checkout = git clone 'git@github.com:tomhoover/bootstrap.git' 'bootstrap'
 
 # homes[h]ick repos
 
 [.homesick/repos/homeshick]
-checkout = git clone 'git://github.com/andsens/homeshick.git'
+checkout = git clone 'git://github.com/andsens/homeshick.git' 'homeshick'
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
 
 [.homesick/repos/mr-castle]
-checkout = git clone 'git@github.com:tomhoover/mr-castle.git'
+checkout = git clone 'git@github.com:tomhoover/mr-castle.git' 'mr-castle'
 
 [.homesick/repos/dotfiles-castle]
-checkout = git clone 'git@github.com:tomhoover/dotfiles-castle.git'
+checkout = git clone 'git@github.com:tomhoover/dotfiles-castle.git' 'dotfiles-castle'
 fixups = 
 	chmod -R go= ~/.config
 
 [.homesick/repos/private-castle]
-checkout = git clone 'tom@manuel.t0m.us:git/private-castle.git'
+checkout = git clone 'tom@manuel.t0m.us:git/private-castle.git' 'private-castle'
 fixups = 
 	chmod -R go= ~/.config
 
