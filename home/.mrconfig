@@ -15,6 +15,9 @@ checkout = git clone 'git@github.com:tomhoover/bin.git' 'bin'
 [src/bootstrap]
 checkout = git clone 'git@github.com:tomhoover/bootstrap.git' 'bootstrap'
 
+[src/dotfiles]
+checkout = git clone 'git@github.com:tomhoover/dotfiles.git' 'dotfiles'
+
 # homes[h]ick repos
 
 [.homesick/repos/homeshick]
