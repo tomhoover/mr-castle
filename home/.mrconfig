@@ -34,7 +34,7 @@ fixups =
 	chmod -R go= ~/.config
 
 [.homesick/repos/private-castle]
-checkout = git clone 'tom@manuel:git/private-castle.git' 'private-castle'
+checkout = git clone 'tom@manuel.t0m.us:git/private-castle.git' 'private-castle'
 fixups = 
 	chmod -R go= ~/.config
 
