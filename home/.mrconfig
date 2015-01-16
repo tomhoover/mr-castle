@@ -31,6 +31,8 @@ checkout = git clone 'git@github.com:tomhoover/mr-castle.git' 'mr-castle'
 [.homesick/repos/dotfiles-castle]
 checkout = git clone 'git@github.com:tomhoover/dotfiles-castle.git' 'dotfiles-castle'
 fixups = 
+	cd "$MR_REPO"
+	[ home/.config/crontab/`hostname -s`.crontab -nt /etc/crontab ] && sudo cp home/.config/crontab/`hostname -s`.crontab /etc/crontab
 	chmod -R go= ~/.config
 
 [.homesick/repos/private-castle]
