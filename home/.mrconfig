@@ -27,17 +27,21 @@ push = echo "not pushing this one, read-only"
 
 [.homesick/repos/mr-castle]
 checkout = git clone 'git@github.com:tomhoover/mr-castle.git' 'mr-castle'
+fixups = 
+	homeshick link
 
 [.homesick/repos/dotfiles-castle]
 checkout = git clone 'git@github.com:tomhoover/dotfiles-castle.git' 'dotfiles-castle'
 fixups = 
+	homeshick link
+	chmod -R go= ~/.config
 	cd "$MR_REPO"
 	[ home/.config/crontab/`hostname -s`.crontab -nt /etc/crontab ] && sudo cp home/.config/crontab/`hostname -s`.crontab /etc/crontab
-	chmod -R go= ~/.config
 
 [.homesick/repos/private-castle]
 checkout = git clone 'tom@manuel.t0m.us:git/private-castle.git' 'private-castle'
 fixups = 
+	homeshick link
 	chmod -R go= ~/.config
 
 # system/host-specific repos
