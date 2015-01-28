@@ -18,6 +18,12 @@ checkout = git clone 'git@github.com:tomhoover/bootstrap.git' 'bootstrap'
 [src/dotfiles]
 checkout = git clone 'git@github.com:tomhoover/dotfiles.git' 'dotfiles'
 
+[src/jekyll-tomhoover]
+checkout = git clone 'git@github.com:tomhoover/jekyll-tomhoover.git' 'jekyll-tomhoover'
+
+[src/tomhoover.github.io]
+checkout = git clone 'git@github.com:tomhoover/tomhoover.github.io.git' 'tomhoover.github.io'
+
 # homes[h]ick repos
 
 [.homesick/repos/homeshick]
@@ -40,7 +46,7 @@ fixups =
 	[ -f home/.config/crontab/`hostname -s`.`whoami`.crontab ] && crontab home/.config/crontab/`hostname -s`.`whoami`.crontab || true
 
 [.homesick/repos/private-castle]
-checkout = git clone 'tom@manuel.t0m.us:git/private-castle.git' 'private-castle'
+checkout = git clone 'tom@manuel:git/private-castle.git' 'private-castle'
 fixups = 
 	~/.homesick/repos/homeshick/bin/homeshick link
 	chmod -R go= ~/.config
