@@ -26,10 +26,19 @@ checkout = git clone 'git@github.com:tomhoover/bootstrap.git' 'bootstrap'
 checkout = git clone 'git@github.com:tomhoover/dotfiles.git' 'dotfiles'
 
 [src/jekyll-tomhoover]
-checkout = git clone 'git@github.com:tomhoover/jekyll-tomhoover.git' 'jekyll-tomhoover'
+checkout = 
+	git clone 'git@github.com:tomhoover/jekyll-tomhoover.git' 'jekyll-tomhoover'
+	cd "$MR_REPO"
+	git remote add upstream git@github.com:mmistakes/so-simple-theme.git
 
 [src/tomhoover.github.io]
 checkout = git clone 'git@github.com:tomhoover/tomhoover.github.io.git' 'tomhoover.github.io'
+
+[src/fdupes]
+checkout = 
+	git clone 'git@github.com:tomhoover/fdupes.git' 'fdupes'
+	cd "$MR_REPO"
+	git remote add upstream git@github.com:adrianlopezroche/fdupes.git
 
 [src/liquidprompt]
 checkout = 
@@ -68,4 +77,3 @@ fixups =
 
 include = cat ~/.config/mr/`uname`.mrconfig 2>/dev/null || true
 include = cat ~/.config/mr/`hostname -s`.mrconfig 2>/dev/null || true
-
