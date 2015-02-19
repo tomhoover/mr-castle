@@ -9,13 +9,6 @@ checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' '.oh-my-zsh
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
 
-[src/gh_rupa/z]
-checkout = git clone 'git@github.com:rupa/z.git' 'z'
-skip = ([ "$1" = update ] && ! hours_since "$1" 12)
-push = echo "not pushing this one, read-only"
-#fixups = 
-#	sudo ln -sf "$MR_REPO/z.1" /usr/local/share/man/man1/z.1
-
 [bin]
 checkout = git clone 'git@github.com:tomhoover/bin.git' 'bin'
 
@@ -26,7 +19,7 @@ checkout = git clone 'git@github.com:tomhoover/bootstrap.git' 'bootstrap'
 checkout = git clone 'git@github.com:tomhoover/dotfiles.git' 'dotfiles'
 
 [src/jekyll-tomhoover]
-checkout = 
+checkout =
 	git clone 'git@github.com:tomhoover/jekyll-tomhoover.git' 'jekyll-tomhoover'
 	cd "$MR_REPO"
 	git remote add upstream git@github.com:mmistakes/so-simple-theme.git
@@ -34,11 +27,13 @@ checkout =
 [src/tomhoover.github.io]
 checkout = git clone 'git@github.com:tomhoover/tomhoover.github.io.git' 'tomhoover.github.io'
 
-[src/fdupes]
-checkout = 
-	git clone 'git@github.com:tomhoover/fdupes.git' 'fdupes'
+[src/z]
+checkout =
+	git clone 'git@github.com:tomhoover/z.git' 'z'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:adrianlopezroche/fdupes.git
+	git remote add upstream git@github.com:rupa/z.git
+#fixups = 
+#	sudo ln -sf "$MR_REPO/z.1" /usr/local/share/man/man1/z.1
 
 [src/liquidprompt]
 checkout = 
