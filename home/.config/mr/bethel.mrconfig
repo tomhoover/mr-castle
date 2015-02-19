@@ -1,3 +1,5 @@
+# read-only repos
+
 [.sickrage]
 checkout = git clone 'https://github.com/SiCKRAGETV/SickRage.git' '.sickrage'
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)

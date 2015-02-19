@@ -2,12 +2,36 @@
 git_gc = git gc "$@"
 jobs = 5
 
-# common repos
+# homes[h]ick repos
 
-[.oh-my-zsh]
-checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' '.oh-my-zsh'
-skip = ([ "$1" = update ] && ! hours_since "$1" 12)
-push = echo "not pushing this one, read-only"
+[.homesick/repos/homeshick]
+checkout =
+	git clone 'git://github.com/tomhoover/homeshick.git' 'homeshick'
+	cd "$MR_REPO"
+	git remote add upstream git://github.com/andsens/homeshick.git
+order = 5
+
+[.homesick/repos/mr-castle]
+checkout = git clone 'git@github.com:tomhoover/mr-castle.git' 'mr-castle'
+fixups = 
+	~/.homesick/repos/homeshick/bin/homeshick link
+
+[.homesick/repos/dotfiles-castle]
+checkout = git clone 'git@github.com:tomhoover/dotfiles-castle.git' 'dotfiles-castle'
+fixups = 
+	~/.homesick/repos/homeshick/bin/homeshick link
+	chmod -R go= ~/.config
+	cd "$MR_REPO"
+	[ home/.config/crontab/`hostname -s`.crontab -nt /etc/crontab ] && sudo cp home/.config/crontab/`hostname -s`.crontab /etc/crontab || true
+	[ -f home/.config/crontab/`hostname -s`.`whoami`.crontab ] && crontab home/.config/crontab/`hostname -s`.`whoami`.crontab || true
+
+[.homesick/repos/private-castle]
+checkout = git clone 'tom@manuel:git/private-castle.git' 'private-castle'
+fixups = 
+	~/.homesick/repos/homeshick/bin/homeshick link
+	chmod -R go= ~/.config
+
+# common repos
 
 [bin]
 checkout = git clone 'git@github.com:tomhoover/bin.git' 'bin'
@@ -41,34 +65,12 @@ checkout =
 	cd "$MR_REPO"
 	git remote add upstream git@github.com:nojhan/liquidprompt.git
 
-# homes[h]ick repos
+# read-only repos
 
-[.homesick/repos/homeshick]
-checkout =
-	git clone 'git://github.com/tomhoover/homeshick.git' 'homeshick'
-	cd "$MR_REPO"
-	git remote add upstream git://github.com/andsens/homeshick.git
-order = 5
-
-[.homesick/repos/mr-castle]
-checkout = git clone 'git@github.com:tomhoover/mr-castle.git' 'mr-castle'
-fixups = 
-	~/.homesick/repos/homeshick/bin/homeshick link
-
-[.homesick/repos/dotfiles-castle]
-checkout = git clone 'git@github.com:tomhoover/dotfiles-castle.git' 'dotfiles-castle'
-fixups = 
-	~/.homesick/repos/homeshick/bin/homeshick link
-	chmod -R go= ~/.config
-	cd "$MR_REPO"
-	[ home/.config/crontab/`hostname -s`.crontab -nt /etc/crontab ] && sudo cp home/.config/crontab/`hostname -s`.crontab /etc/crontab || true
-	[ -f home/.config/crontab/`hostname -s`.`whoami`.crontab ] && crontab home/.config/crontab/`hostname -s`.`whoami`.crontab || true
-
-[.homesick/repos/private-castle]
-checkout = git clone 'tom@manuel:git/private-castle.git' 'private-castle'
-fixups = 
-	~/.homesick/repos/homeshick/bin/homeshick link
-	chmod -R go= ~/.config
+[.oh-my-zsh]
+checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' '.oh-my-zsh'
+skip = ([ "$1" = update ] && ! hours_since "$1" 12)
+push = echo "not pushing this one, read-only"
 
 # system/host-specific repos
 
