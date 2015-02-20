@@ -1,6 +1,8 @@
 [DEFAULT]
 git_gc = git gc "$@"
 jobs = 5
+# git_dum 'diff upstream/master'
+git_dum = git diff --name-status upstream/master 2> /dev/null || true
 
 # homes[h]ick repos
 
