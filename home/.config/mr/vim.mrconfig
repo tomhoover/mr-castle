@@ -81,3 +81,10 @@ checkout =
 	cd "$MR_REPO"
 	git remote add upstream git@github.com:ntpeters/vim-better-whitespace.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
+
+[.vim/bundle/vim-tmux]
+checkout =
+	git clone 'git@github.com:tomhoover/vim-tmux.git' 'vim-tmux'
+	cd "$MR_REPO"
+	git remote add upstream git@github.com:tmux-plugins/vim-tmux.git
+skip = ([ "$1" = update ] && ! hours_since "$1" 24)
