@@ -2,89 +2,89 @@
 checkout =
 	git clone 'git@github.com:tomhoover/vim-pathogen.git' 'vim-pathogen'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:tpope/vim-pathogen.git
+	git remote add upstream git://github.com/tpope/vim-pathogen.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-scriptease]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-scriptease.git' 'vim-scriptease'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:tpope/vim-scriptease.git
+	git remote add upstream git://github.com/tpope/vim-scriptease.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-sensible]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-sensible.git' 'vim-sensible'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:tpope/vim-sensible.git
+	git remote add upstream git://github.com/tpope/vim-sensible.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-colors-solarized]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-colors-solarized.git' 'vim-colors-solarized'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:altercation/vim-colors-solarized.git
+	git remote add upstream git://github.com/altercation/vim-colors-solarized.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-json]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-json.git' 'vim-json'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:elzr/vim-json.git
+	git remote add upstream git://github.com/elzr/vim-json.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-airline]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-airline.git' 'vim-airline'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:bling/vim-airline.git
+	git remote add upstream git://github.com/bling/vim-airline.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-fugitive]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-fugitive.git' 'vim-fugitive'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:tpope/vim-fugitive.git
+	git remote add upstream git://github.com/tpope/vim-fugitive.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-bufferline]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-bufferline.git' 'vim-bufferline'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:bling/vim-bufferline.git
+	git remote add upstream git://github.com/bling/vim-bufferline.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-gitgutter]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-gitgutter.git' 'vim-gitgutter'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:airblade/vim-gitgutter.git
+	git remote add upstream git://github.com/airblade/vim-gitgutter.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-repeat]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-repeat.git' 'vim-repeat'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:tpope/vim-repeat.git
+	git remote add upstream git://github.com/tpope/vim-repeat.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/tmuxline.vim]
 checkout =
 	git clone 'git@github.com:tomhoover/tmuxline.vim.git' 'tmuxline.vim'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:edkolev/tmuxline.vim.git
+	git remote add upstream git://github.com/edkolev/tmuxline.vim.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-better-whitespace]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-better-whitespace.git' 'vim-better-whitespace'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:ntpeters/vim-better-whitespace.git
+	git remote add upstream git://github.com/ntpeters/vim-better-whitespace.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)
 
 [.vim/bundle/vim-tmux]
 checkout =
 	git clone 'git@github.com:tomhoover/vim-tmux.git' 'vim-tmux'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:tmux-plugins/vim-tmux.git
+	git remote add upstream git://github.com/tmux-plugins/vim-tmux.git
 skip = ([ "$1" = update ] && ! hours_since "$1" 24)

@@ -2,16 +2,16 @@
 checkout =
 	git clone 'git@github.com:tomhoover/fdupes.git' 'fdupes'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:adrianlopezroche/fdupes.git
+	git remote add upstream git://github.com/adrianlopezroche/fdupes.git
 
 # read-only repos
 
 [src/gh_altercation/solarized]
-checkout = git clone 'git://github.com/altercation/solarized.git' 'solarized'
+checkout = git clone 'https://github.com/altercation/solarized.git' 'solarized'
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
 
 [src/gh_mathiasbynens/dotfiles]
-checkout = git clone 'git@github.com:mathiasbynens/dotfiles.git' 'dotfiles'
+checkout = git clone 'https://github.com/mathiasbynens/dotfiles.git' 'dotfiles'
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"

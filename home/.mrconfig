@@ -1,6 +1,6 @@
 [DEFAULT]
 git_gc = git gc "$@"
-jobs = 5
+jobs = 10
 # git_dum 'diff upstream/master'
 git_dum = git diff --name-status upstream/master 2> /dev/null || true
 
@@ -8,7 +8,7 @@ git_dum = git diff --name-status upstream/master 2> /dev/null || true
 
 [.homesick/repos/homeshick]
 checkout =
-	git clone 'git://github.com/tomhoover/homeshick.git' 'homeshick'
+	git clone 'git@github.com:tomhoover/homeshick.git' 'homeshick'
 	cd "$MR_REPO"
 	git remote add upstream git://github.com/andsens/homeshick.git
 order = 5
@@ -48,7 +48,7 @@ checkout = git clone 'git@github.com:tomhoover/dotfiles.git' 'dotfiles'
 checkout =
 	git clone 'git@github.com:tomhoover/jekyll-tomhoover.git' 'jekyll-tomhoover'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:mmistakes/so-simple-theme.git
+	git remote add upstream git://github.com/mmistakes/so-simple-theme.git
 
 [src/tomhoover.github.io]
 checkout = git clone 'git@github.com:tomhoover/tomhoover.github.io.git' 'tomhoover.github.io'
@@ -57,7 +57,7 @@ checkout = git clone 'git@github.com:tomhoover/tomhoover.github.io.git' 'tomhoov
 checkout =
 	git clone 'git@github.com:tomhoover/z.git' 'z'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:rupa/z.git
+	git remote add upstream git://github.com/rupa/z.git
 #fixups =
 #	sudo ln -sf "$MR_REPO/z.1" /usr/local/share/man/man1/z.1
 
@@ -65,7 +65,7 @@ checkout =
 checkout =
 	git clone 'git@github.com:tomhoover/liquidprompt.git' 'liquidprompt'
 	cd "$MR_REPO"
-	git remote add upstream git@github.com:nojhan/liquidprompt.git
+	git remote add upstream git://github.com/nojhan/liquidprompt.git
 
 # read-only repos
 
