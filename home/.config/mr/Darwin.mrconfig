@@ -1,3 +1,11 @@
+[.gnupg]
+checkout =
+	git clone 'tom@manuel:git/gnupg.git' '.gnupg'
+	cd "$MR_REPO"
+	git remote add nas tom@nas:/mnt/DroboFS/Shares/git/gnupg.git
+fixups =
+	chmod -R go= ~/.gnupg
+
 [src/fdupes]
 checkout =
 	git clone 'git@github.com:tomhoover/fdupes.git' 'fdupes'
