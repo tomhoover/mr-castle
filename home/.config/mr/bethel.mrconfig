@@ -45,10 +45,10 @@ checkout = git clone 'https://github.com/sreitshamer/arq_restore.git' 'arq_resto
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
 
-[src/gh_toby00001/btsync_drobo5n]
-checkout = git clone 'https://github.com/toby00001/btsync_drobo5n.git' 'btsync_drobo5n'
-skip = ([ "$1" = update ] && ! hours_since "$1" 12)
-push = echo "not pushing this one, read-only"
+#[src/gh_toby00001/btsync_drobo5n]
+#checkout = git clone 'https://github.com/toby00001/btsync_drobo5n.git' 'btsync_drobo5n'
+#skip = ([ "$1" = update ] && ! hours_since "$1" 12)
+#push = echo "not pushing this one, read-only"
 
 [src/gist_transmission-webui-installer]
 checkout = git clone 'https://gist.github.com/3676fb68081369dbffa1.git' 'gist_transmission-webui-installer'
