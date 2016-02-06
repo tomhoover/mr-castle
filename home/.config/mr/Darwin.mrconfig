@@ -12,6 +12,12 @@ checkout =
 	cd "$MR_REPO"
 	git remote add upstream git://github.com/adrianlopezroche/fdupes.git
 
+[src/Fairmount]
+checkout =
+	git clone 'git@github.com:tomhoover/Fairmount.git' 'Fairmount'
+	cd "$MR_REPO"
+	git remote add upstream git@github.com:BoxOfSnoo/Fairmount.git
+
 # read-only repos
 
 [src/gh_altercation/solarized]
