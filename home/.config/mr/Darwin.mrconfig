@@ -1,8 +1,11 @@
 [.gnupg]
 checkout =
-	git clone 'tom@manuel:git/gnupg.git' '.gnupg'
+	git clone 'manuel:git/gnupg.git' '.gnupg'
 	cd "$MR_REPO"
-	git remote add nas tom@nas:/mnt/DroboFS/Shares/git/gnupg.git
+	git remote add drobo drobo:/mnt/DroboFS/Shares/git/gnupg.git
+	git remote add all manuel:git/gnupg.git
+	git remote set-url --add --push all drobo:/mnt/DroboFS/Shares/git/gnupg.git
+	git remote set-url --add --push all manuel:git/gnupg.git
 fixups =
 	chmod -R go= ~/.gnupg
 
@@ -18,6 +21,15 @@ checkout =
 	cd "$MR_REPO"
 	git remote add upstream git@github.com:BoxOfSnoo/Fairmount.git
 
+[src/Check-RAID]
+checkout =
+	git clone 'git@github.com:tomhoover/Check-RAID.git' 'Check-RAID'
+	cd "$MR_REPO"
+	git remote add upstream git@github.com:Arko/Check-RAID.git
+fixups =
+	chmod +x "$MR_REPO/check-raid" || true
+#	sudo ln -sf "$MR_REPO/check-raid" /etc/periodic/daily/410.status-appleraid || true
+
 # read-only repos
 
 [src/gh_altercation/solarized]
@@ -27,5 +39,10 @@ push = echo "not pushing this one, read-only"
 
 [src/gh_mathiasbynens/dotfiles]
 checkout = git clone 'https://github.com/mathiasbynens/dotfiles.git' 'dotfiles'
+skip = ([ "$1" = update ] && ! hours_since "$1" 12)
+push = echo "not pushing this one, read-only"
+
+[src/gh_dhess/applescripts]
+checkout = git clone 'https://github.com/dhess/applescripts.git' 'applescripts'
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"

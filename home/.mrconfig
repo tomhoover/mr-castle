@@ -28,7 +28,13 @@ fixups =
 	[ -f home/.config/crontab/`hostname -s`.`whoami`.crontab ] && crontab home/.config/crontab/`hostname -s`.`whoami`.crontab || true
 
 [.homesick/repos/private-castle]
-checkout = git clone 'tom@manuel:git/private-castle.git' 'private-castle'
+checkout =
+	git clone 'manuel:git/private-castle.git' 'private-castle'
+	cd "$MR_REPO"
+	git remote add drobo drobo:/mnt/DroboFS/Shares/git/private-castle.git
+	git remote add all manuel:git/private-castle.git
+	git remote set-url --add --push all drobo:/mnt/DroboFS/Shares/git/private-castle.git
+	git remote set-url --add --push all manuel:git/private-castle.git
 fixups =
 	~/.homesick/repos/homeshick/bin/homeshick link
 	chmod -R go= ~/.config
