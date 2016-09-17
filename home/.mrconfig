@@ -82,6 +82,6 @@ push = echo "not pushing this one, read-only"
 
 # system/host-specific repos
 
-include = cat ~/.config/mr/vim.mrconfig 2>/dev/null || true
+#include = cat ~/.config/mr/vim.mrconfig 2>/dev/null || true
 include = cat ~/.config/mr/`uname`.mrconfig 2>/dev/null || true
 include = cat ~/.config/mr/`hostname -s`.mrconfig 2>/dev/null || true
