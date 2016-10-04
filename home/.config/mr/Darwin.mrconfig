@@ -9,12 +9,6 @@ checkout =
 fixups =
 	chmod -R go= ~/.gnupg
 
-[src/fdupes]
-checkout =
-	git clone 'git@github.com:tomhoover/fdupes.git' 'fdupes'
-	cd "$MR_REPO"
-	git remote add upstream git://github.com/adrianlopezroche/fdupes.git
-
 [src/Fairmount]
 checkout =
 	git clone 'git@github.com:tomhoover/Fairmount.git' 'Fairmount'
@@ -37,12 +31,17 @@ checkout = git clone 'https://github.com/altercation/solarized.git' 'solarized'
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
 
-[src/github.com/mathiasbynens/dotfiles]
-checkout = git clone 'https://github.com/mathiasbynens/dotfiles.git' 'dotfiles'
+[src/github.com/dhess/applescripts]
+checkout = git clone 'https://github.com/dhess/applescripts.git' 'applescripts'
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
 
-[src/github.com/dhess/applescripts]
-checkout = git clone 'https://github.com/dhess/applescripts.git' 'applescripts'
+[src/github.com/donmelton/video_transcoding]
+checkout = git clone 'https://github.com/donmelton/video_transcoding.git' 'video_transcoding'
+skip = ([ "$1" = update ] && ! hours_since "$1" 12)
+push = echo "not pushing this one, read-only"
+
+[src/github.com/mathiasbynens/dotfiles]
+checkout = git clone 'https://github.com/mathiasbynens/dotfiles.git' 'dotfiles'
 skip = ([ "$1" = update ] && ! hours_since "$1" 12)
 push = echo "not pushing this one, read-only"
