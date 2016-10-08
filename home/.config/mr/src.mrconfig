@@ -4,9 +4,9 @@ fixups = ln -sf "$MR_REPO/bin/clean-github-pr.py" "$HOME/bin/clean-github-pr.py"
 
 [src/github.com/adrianlopezroche/fdupes]
 checkout =
-	git clone 'git@github.com:tomhoover/fdupes.git' 'fdupes'
-	cd "$MR_REPO"
-	git remote add upstream git://github.com/adrianlopezroche/fdupes.git
+    git clone 'git@github.com:tomhoover/fdupes.git' 'fdupes'
+    cd "$MR_REPO"
+    git remote add upstream git://github.com/adrianlopezroche/fdupes.git
     git fetch upstream
 
 [src/github.com/nojhan/liquidprompt]
